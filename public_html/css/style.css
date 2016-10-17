@@ -368,7 +368,10 @@ Paneles
 
 }
 
+.whatsapp:hover{
+    background:#e3e3e3 url(images/icon-whats.png) no-repeat left !important;
 
+}
 
 
 #labelShare{
