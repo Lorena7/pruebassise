@@ -58,11 +58,7 @@ $(document).ready(function() {
                 break;
             case 'whatsapp':
                 //$('#btnWhatsApp').attr("href","whatsapp://send?text=Compartiendo informacion desde "+encodeURIComponent(pageUrl));
-                //openLink = 'whatsapp://send?text= Información compartida desde la aplicación "Sistema de Informacion Social del Ecuador SISEcuador" del Miniterio Coordinador de Desarrollo Social MCDS. ' + encodeURIComponent(pageUrl);
-                
-                var message = " mcds " + encodeURIComponent(pageUrl);
-                var whatsapp_url = "whatsapp://send?text=" + message;
-                window.location.href = whatsapp_url;
+                openLink = 'whatsapp://send?text= Información compartida desde la aplicación "Sistema de Informacion Social del Ecuador SISEcuador" del Miniterio Coordinador de Desarrollo Social MCDS. ' + encodeURIComponent(pageUrl);
                 break;
 
         }
