@@ -7,6 +7,7 @@ and open the template in the editor.
     <head>
         <title></title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="js/libs/SocialSharing.js"></script>
     </head>
     <body>
         <a href="whatsapp://send?text=Hello%2C%20World!">Whatsapp></a>
@@ -20,5 +21,9 @@ and open the template in the editor.
          window.plugins.socialsharing.share(null, null, null, 'URL que quereis compartir')
     </script>
    
+    
+    
+    <button onclick="window.plugins.socialsharing.shareViaWhatsApp('Message via WhatsApp', null /* img */, null /* url */, function() {console.log('share ok')}, function(errormsg){alert(errormsg)})">msg via WhatsApp (with errcallback)</button>
+    
     </body>
 </html>
