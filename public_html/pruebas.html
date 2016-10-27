@@ -8,11 +8,12 @@ and open the template in the editor.
         <title></title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <script type="text/javascript" src="js/libs/SocialSharing.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
     </head>
     <body>
           
         
-    <button onclick="window.plugins.socialsharing.shareViaWhatsApp('Message via WhatsApp', null /* img */, null /* url */, function() {console.log('share ok')}, function(errormsg){alert(errormsg)})">msg via WhatsApp (with errcallback)</button>
-    
+        <button onclick=" window.plugins.socialsharing.share(null, null, null, 'URL que quereis compartir')">compartir</button>
+   
     </body>
 </html>
