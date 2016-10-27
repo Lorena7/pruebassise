@@ -40,7 +40,7 @@ $(document).ready(function() {
         var shareName = $(this).attr('class').split(' ')[0]; //get the first class name of clicked element
 
         switch (shareName) //switch to different links based on different social name
-        {
+        {            
             case 'facebook':
                 //openLink = 'http://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&amp;title=' + encodeURIComponent(pageTitle);
                 openLink = 'http://m.facebook.com/sharer.php?u=' + encodeURIComponent(pageUrl) + '&t=' + encodeURIComponent('Miniterio Coordinador de Desarrollo Social');
@@ -99,7 +99,7 @@ $(document).ready(function() {
             case 'whatsapp':
                 //$('#btnWhatsApp').attr("href","whatsapp://send?text=Compartiendo informacion desde "+encodeURIComponent(pageUrl));
                 //openLink = 'whatsapp://send?text= Información compartida desde la aplicación "Sistema de Informacion Social del Ecuador SISEcuador" del Miniterio Coordinador de Desarrollo Social MCDS. ' + encodeURIComponent(pageUrl);
-                window.plugins.socialsharing.shareViaWhatsApp('hola', null, '' + pageUrl, null, null);
+                window.plugins.socialsharing.shareViaWhatsApp('Información compartida desde la aplicación "Sistema de Informacion Social del Ecuador SISEcuador" del Miniterio Coordinador de Desarrollo Social MCDS', null, '' + pageUrl, null, null);
                 break;
 
         }
