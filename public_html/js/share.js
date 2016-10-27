@@ -59,20 +59,20 @@ $(document).ready(function() {
             case 'whatsapp':
                 //$('#btnWhatsApp').attr("href","whatsapp://send?text=Compartiendo informacion desde "+encodeURIComponent(pageUrl));
                 //openLink = 'whatsapp://send?text= Información compartida desde la aplicación "Sistema de Informacion Social del Ecuador SISEcuador" del Miniterio Coordinador de Desarrollo Social MCDS. ' + encodeURIComponent(pageUrl);
-                window.plugins.socialsharing.shareViaWhatsApp('hola', null, ''+encodeURIComponent(pageUrl),null,null);
+                window.plugins.socialsharing.shareViaWhatsApp('hola', null, ''+pageUrl,null,null);
                 break;
 
         }
 
         //Parameters for the Popup window
-        /*winWidth = 650;
+        winWidth = 650;
         winHeight = 450;
         winLeft = ($(window).width() - winWidth) / 2,
                 winTop = ($(window).height() - winHeight) / 2,
                 winOptions = 'width=' + winWidth + ',height=' + winHeight + ',top=' + winTop + ',left=' + winLeft;
 
         //open Popup window and redirect user to share website.
-        window.open(openLink, 'Compartir este enlace', winOptions);*/
+        window.open(openLink, 'Compartir este enlace', winOptions);
 
        return false;
     });
