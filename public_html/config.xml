@@ -125,6 +125,15 @@
         <access origin="http://phonegap.com" subdomains="true" />  - same as above, but including subdomains, such as http://build.phonegap.com/
         <access origin="http://phonegap.com" browserOnly="true" /> - only allows http://phonegap.com to be opened by the child browser.
     -->
+    
+      <gap:config-file platform="android" parent="/manifest/application/activity" mode="add">
+        <intent-filter>
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.DEFAULT" />
+            <category android:name="android.intent.category.BROWSABLE" />
+            <data android:host="aork2.com" android:scheme="http" />
+        </intent-filter>
+      </gap:config-file>
     <!--
     <platform name="android">
         <allow-intent href="market:*" />
