@@ -44,20 +44,56 @@ $(document).ready(function() {
             case 'facebook':
                 //openLink = 'http://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&amp;title=' + encodeURIComponent(pageTitle);
                 openLink = 'http://m.facebook.com/sharer.php?u=' + encodeURIComponent(pageUrl) + '&t=' + encodeURIComponent('Miniterio Coordinador de Desarrollo Social');
+                //Parameters for the Popup window
+                winWidth = 650;
+                winHeight = 450;
+                winLeft = ($(window).width() - winWidth) / 2,
+                        winTop = ($(window).height() - winHeight) / 2,
+                        winOptions = 'width=' + winWidth + ',height=' + winHeight + ',top=' + winTop + ',left=' + winLeft;
+
+                //open Popup window and redirect user to share website.
+                window.open(openLink, 'Compartir este enlace', winOptions);
                 break;
 
             case 'twitter':
                 //openLink = 'http://twitter.com/home?status=' + encodeURIComponent(pageTitle + ' ' + pageUrl);                
                 openLink = 'http://www.twitter.com/share?text=' + encodeURIComponent('Compartiendo información desde #SISEcuador Sistema de Información Social del Ecuador del @SocialEc #MCDS') + '&url=' + encodeURIComponent(pageUrl);
+                //Parameters for the Popup window
+                winWidth = 650;
+                winHeight = 450;
+                winLeft = ($(window).width() - winWidth) / 2,
+                        winTop = ($(window).height() - winHeight) / 2,
+                        winOptions = 'width=' + winWidth + ',height=' + winHeight + ',top=' + winTop + ',left=' + winLeft;
+
+                //open Popup window and redirect user to share website.
+                window.open(openLink, 'Compartir este enlace', winOptions);
                 break;
 
             case 'google':
                 openLink = 'https://plus.google.com/share?url=' + encodeURIComponent(pageUrl) + '&amp;title=' + encodeURIComponent(pageTitle);
+                //Parameters for the Popup window
+                winWidth = 650;
+                winHeight = 450;
+                winLeft = ($(window).width() - winWidth) / 2,
+                        winTop = ($(window).height() - winHeight) / 2,
+                        winOptions = 'width=' + winWidth + ',height=' + winHeight + ',top=' + winTop + ',left=' + winLeft;
+
+                //open Popup window and redirect user to share website.
+                window.open(openLink, 'Compartir este enlace', winOptions);
                 break;
 
             case 'email':
                 openLink = 'mailto:?subject=' + pageTitle
                         + '&body= Se ha compartido información del Miniterio Coordinador de Desarrollo Social - MCDS ' + encodeURIComponent(pageUrl);
+                //Parameters for the Popup window
+                winWidth = 650;
+                winHeight = 450;
+                winLeft = ($(window).width() - winWidth) / 2,
+                        winTop = ($(window).height() - winHeight) / 2,
+                        winOptions = 'width=' + winWidth + ',height=' + winHeight + ',top=' + winTop + ',left=' + winLeft;
+
+                //open Popup window and redirect user to share website.
+                window.open(openLink, 'Compartir este enlace', winOptions);
                 break;
 
             case 'whatsapp':
@@ -67,16 +103,6 @@ $(document).ready(function() {
                 break;
 
         }
-
-        //Parameters for the Popup window
-        winWidth = 650;
-        winHeight = 450;
-        winLeft = ($(window).width() - winWidth) / 2,
-                winTop = ($(window).height() - winHeight) / 2,
-                winOptions = 'width=' + winWidth + ',height=' + winHeight + ',top=' + winTop + ',left=' + winLeft;
-
-        //open Popup window and redirect user to share website.
-        window.open(openLink, 'Compartir este enlace', winOptions);
 
         return false;
     });
