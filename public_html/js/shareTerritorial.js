@@ -33,14 +33,14 @@ $(document).ready(function() {
         }
 
     }
-    
+
     //var ip = 'http://www.siise.gob.ec:8080/sharePruebas/share/public_html/'; //ip pruebas
     var ip = 'http://www.siise.gob.ec/shareProduccionSISEcuadorv2/share/public_html/'; //ip pruebas
     //var ip = 'http://192.168.50.76:8383/share/'; //mi pc
     var pageTitle = document.title; //HTML page title
     if (elem.length > 3) {
         //var pageUrl = 'http://192.168.50.76:8383/share/' + url + '?' + id_provincia + '&' + id_canton + '&' + id_parroquia+ '&' + id_institucion + '&' + id_estado;
-        var pageUrl = ip + url + '?' + id_provincia + '&' + id_canton + '&' + id_parroquia+ '&' + id_institucion + '&' + id_tipologia + '&' + id_estado;
+        var pageUrl = ip + url + '?' + id_provincia + '&' + id_canton + '&' + id_parroquia + '&' + id_institucion + '&' + id_tipologia + '&' + id_estado;
     } else {
         var pageUrl = ip + url + '?' + id_provincia + '&' + id_canton + '&' + id_parroquia;
     }
@@ -59,24 +59,28 @@ $(document).ready(function() {
                 //openLink = 'http://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&amp;title=' + encodeURIComponent(pageTitle);
                 openLink = 'http://m.facebook.com/sharer.php?u=' + encodeURIComponent(pageUrl) + '&t=' + encodeURIComponent('Ministerio de Coordinación de Desarrollo Social');
                 break;
+
             case 'twitter':
                 //openLink = 'http://twitter.com/home?status=' + encodeURIComponent(pageTitle + ' ' + pageUrl);                
                 openLink = 'http://www.twitter.com/share?text=' + encodeURIComponent('Compartiendo información desde #SISEcuador Sistema de Información Social del Ecuador del @SocialEc #MCDS') + '&url=' + encodeURIComponent(pageUrl);
                 break;
+
             case 'google':
                 openLink = 'https://plus.google.com/share?url=' + encodeURIComponent(pageUrl) + '&amp;title=' + encodeURIComponent(pageTitle);
                 break;
+
             case 'email':
                 openLink = 'mailto:?subject=' + pageTitle
                         + '&body= Se ha compartido información del Ministerio de Coordinación de Desarrollo Social - MCDS ' + encodeURIComponent(pageUrl);
                 break;
+
             case 'whatsapp':
                 //$('#btnWhatsApp').attr("href","whatsapp://send?text=Compartiendo informacion desde "+encodeURIComponent(pageUrl));
-                openLink = 'whatsapp://send?text= Información compartida desde la aplicación "Sistema de Informacion Social del Ecuador SISEcuador" del Miniterio Coordinador de Desarrollo Social MCDS. ' + encodeURIComponent(pageUrl);
+                //openLink = 'whatsapp://send?text= Información compartida desde la aplicación "Sistema de Informacion Social del Ecuador SISEcuador" del Miniterio Coordinador de Desarrollo Social MCDS. ' + encodeURIComponent(pageUrl);
+                window.plugins.socialsharing.shareViaWhatsApp('Información compartida desde la aplicación "Sistema de Informacion Social del Ecuador SISEcuador" del Miniterio Coordinador de Desarrollo Social MCDS', null, '' + pageUrl, null, null);
                 break;
 
         }
-
         //Parameters for the Popup window
         winWidth = 650;
         winHeight = 450;
