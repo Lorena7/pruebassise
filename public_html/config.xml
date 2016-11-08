@@ -112,7 +112,7 @@
     IMportante para que funcione con la nueva version de phonegap
     Network Request Whitelist-->
     <gap:plugin name="cordova-plugin-whitelist" version="1.0.0" source="npm" />
-    <gap:plugin name="cordova-plugin-x-socialsharing" source="npm" />
+    <!--<gap:plugin name="cordova-plugin-x-socialsharing" source="npm" />-->
     <!-- deberías agregar el dominio al cual se hacen la solicitud de los web services.-->
     <!--<access origin="*.google.com" />
     <access origin="*.googleapis.com" />
