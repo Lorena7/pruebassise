@@ -19,7 +19,7 @@
 
    
     <!-- Customize your app and platform with the preference element. -->
-    <!--<preference name="phonegap-version"           value="cli-6.3.0" /> -->         <!-- all: current version of PhoneGap -->
+    <preference name="phonegap-version"           value="cli-6.3.0" />          <!-- all: current version of PhoneGap -->
     <preference name="orientation"                value="default" />        <!-- all: default means both landscape and portrait are enabled -->
     <preference name="target-device"              value="universal" />      <!-- all: possible values handset, tablet, or universal -->
     <preference name="fullscreen"                 value="true" />           <!-- all: hides the status bar at the top of the screen -->
@@ -111,9 +111,8 @@
     OJO
     IMportante para que funcione con la nueva version de phonegap
     Network Request Whitelist-->
-    <gap:plugin name="cordova-plugin-whitelist" version="1.2.2" source="npm" />
+    <gap:plugin name="cordova-plugin-whitelist" version="1.0.0" source="npm" />
     <gap:plugin name="cordova-plugin-x-socialsharing" source="npm" />
-    <plugin name="org.apache.cordova.media" source="pgb" spec="0.2.16" />
     <!-- deberías agregar el dominio al cual se hacen la solicitud de los web services.-->
     <!--<access origin="*.google.com" />
     <access origin="*.googleapis.com" />
